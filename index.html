@@ -73,6 +73,28 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 96px;
   }
+  .thumb-row {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 8px; margin-bottom: 18px;
+  }
+  .thumb-row img {
+    width: 100%; aspect-ratio: 1/1; object-fit: cover;
+    border-radius: 10px; border: 2px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    cursor: pointer; transition: transform .2s;
+    background: #f3e5f5;
+  }
+  .thumb-row img:hover { transform: scale(1.05); }
+  .demo-gif {
+    width: 100%; max-width: 560px;
+    border-radius: 14px; display: block;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    margin: 0 auto 14px;
+  }
+  .gallery-caption {
+    text-align: center; font-size: 13px;
+    color: var(--gray); margin-top: -6px;
+  }
   .discount-tag {
     position: absolute; top: 14px; right: 14px;
     background: var(--primary); color: #fff;
@@ -372,11 +394,18 @@
     <p class="subtitle">Alat Pijat Multifungsi Seluruh Tubuh — Hilangkan Pegal Leher, Bahu, Punggung & Kaki dalam 10 Menit</p>
 
     <div class="product-img">
-      <div class="placeholder">💆‍♀️💆‍♂️</div>
+      <img src="images/produk-utama.jpg" alt="Alat Pijat Multifungsi" style="width:100%;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="placeholder" style="display:none">💆‍♀️💆‍♂️</div>
       <div class="discount-tag">
         <span class="num">-50%</span>
         <span class="lbl">HARI INI</span>
       </div>
+    </div>
+
+    <div class="thumb-row">
+      <img src="images/produk-1.jpg" alt="Tampilan 1" onerror="this.style.visibility='hidden'" />
+      <img src="images/produk-2.jpg" alt="Tampilan 2" onerror="this.style.visibility='hidden'" />
+      <img src="images/produk-3.jpg" alt="Tampilan 3" onerror="this.style.visibility='hidden'" />
     </div>
 
     <div class="rating-row">
@@ -445,6 +474,10 @@
   <div class="container">
     <h2>Solusinya: <span class="hl">Alat Pijat Multifungsi</span></h2>
     <p class="section-sub">Pijat profesional di rumah, kapanpun kamu mau!</p>
+
+    <img src="images/demo.gif" alt="Demo cara kerja alat pijat" class="demo-gif" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+    <p class="gallery-caption" style="display:none">👆 Demo penggunaan alat pijat</p>
+
     <div class="features">
       <div class="feature"><span class="ico">💪</span><h3>Multifungsi</h3><p>Leher, bahu, punggung, kaki, lengan — semua bisa!</p></div>
       <div class="feature"><span class="ico">🔥</span><h3>Heat Therapy</h3><p>Sensasi hangat untuk relaksasi otot lebih dalam</p></div>
